@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: red;
+}
+
+.animated{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#circle1, #circle2, #circle3{
+    animation: pulsating 1s infinite alternate forwards;
+    position: relative;
+    height: 100%;
+    width: 3rem;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+#circle2{
+    animation-delay: .3s;
+}
+
+#circle3{
+    animation-delay: .4s;
+}
+
+@keyframes pulsating {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(.5);
+    }
+}
